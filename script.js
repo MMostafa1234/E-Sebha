@@ -7,7 +7,7 @@ let images = document.querySelector(".images");
 let dropdown_item3 = document.querySelector(".dropdown-item3");
 let dropdown_item4 = document.querySelector(".dropdown-item4");
 let dropdown_item1 = document.querySelector(".dropdown-item1");
-let image_default = document.querySelector(".image-default");
+let image_default = document.querySelector(".img-default");
 let total_counter = document.querySelector(".total-counter");
 let zikr_container = document.querySelector(".zikr-container");
 
@@ -214,4 +214,5 @@ function reload() {
     localStorage.getItem("image") || image_default.src;
 }
 reload();
+
 
