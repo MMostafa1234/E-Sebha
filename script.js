@@ -89,6 +89,15 @@ zikr.onclick = function () {
   document.querySelector(".zikr-container").style.display = "flex";
 };
 
+let dropdown_item5=document.querySelector(".dropdown-item5");
+
+dropdown_item5.onclick=function(){
+    background.style.display = "none";
+  images.style.display = "none";
+
+  document.querySelector(".zikr-container").style.display = "flex";
+}
+
 let zikr_btn = document.querySelector(".zikr-btn");
 
 zikr_btn.onclick = function () {
@@ -146,6 +155,10 @@ dropdown_item1.onclick = function () {
       arr.push(input.value);
       zikr_container.prepend(zikr_box);
       localStorage.setItem("array", JSON.stringify(arr));
+
+            localStorage.setItem("zikr",zikr_box.innerHTML);
+      document.querySelector(".zikr").innerHTML = "";
+document.querySelector(".zikr").innerHTML = localStorage.getItem("zikr");
     }
   };
 };
@@ -214,5 +227,6 @@ function reload() {
     localStorage.getItem("image") || image_default.src;
 }
 reload();
+
 
 
