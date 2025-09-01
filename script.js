@@ -176,7 +176,7 @@ window.onscroll = function () {
 
 function reload() {
   document.body.style.backgroundImage = `url(${
-    localStorage.getItem("background") || `../images/images.jpeg`
+    localStorage.getItem("background") || `images/images.jpeg`
   })`;
   display.innerHTML = localStorage.getItem("display") || 0;
   total_counter.innerHTML =
@@ -214,3 +214,4 @@ function reload() {
     localStorage.getItem("image") || image_default.src;
 }
 reload();
+
